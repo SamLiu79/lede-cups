@@ -49,6 +49,7 @@ define Build/Install
 
 	if [ x$(CONFIG_EPSON_INKJET_PRINTER_PPDS_COMPILE) = xy ]; then \
 		#ppdc $(PKG_BUILD_DIR)/tmp-ppds $(PKG_BUILD_DIR)/epson-inkjet-printer-ppds.ppdb; \
+		echo "OK"; \
 	fi
 endef
 
