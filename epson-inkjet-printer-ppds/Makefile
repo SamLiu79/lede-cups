@@ -18,8 +18,8 @@ PKG_MD5SUM:=287aee16f1553f4e495c01ab12c816e4
 include $(INCLUDE_DIR)/package.mk
 
 define Package/epson-inkjet-printer-ppds
-  SECTION:=print
-  CATEGORY:=Printing and Imaging
+  SECTION:=net
+  CATEGORY:=Network
   TITLE:=PPD files for Epson Inkjet printer driver
   DEPENDS:=+epson-inkjet-printer-filter
   MAINTAINER:=Weijie Gao <hackpascal@gmail.com>

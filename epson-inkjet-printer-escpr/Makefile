@@ -21,8 +21,8 @@ PKG_INSTALL:=1
 include $(INCLUDE_DIR)/package.mk
 
 define Package/epson-inkjet-printer-escpr
-  SECTION:=network
-  CATEGORY:=Printing and Imaging
+  SECTION:=net
+  CATEGORY:=Network
   TITLE:=Epson Inkjet ESC/P-R printer driver
   DEPENDS:=+libcups +libcupsimage
   MAINTAINER:=Weijie Gao <hackpascal@gmail.com>

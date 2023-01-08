@@ -22,8 +22,8 @@ PKG_FIXUP:=autoreconf
 include $(INCLUDE_DIR)/package.mk
 
 define Package/epson-inkjet-printer-filter
-  SECTION:=network
-  CATEGORY:=Printing and Imaging
+  SECTION:=net
+  CATEGORY:=Network
   TITLE:=Epson Inkjet printer driver
   DEPENDS:=+libcups +libcupsimage +libjpeg +libstdcpp
   MAINTAINER:=Weijie Gao <hackpascal@gmail.com>
