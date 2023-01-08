@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=epson-inkjet-printer-escpr
 PKG_VERSION:=1.7.22
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-1lsb3.2.tar.gz
 PKG_SOURCE_URL:=https://download3.ebz.epson.net/dsc/f/03/00/13/96/55/c6fced63098ae1ba104f11f572794fd558ffca29/$(PKG_SOURCE_URL)
@@ -68,7 +68,7 @@ endef
 define Package/epson-inkjet-printer-escpr-ppds/install
 	if [ x$(CONFIG_EPSON_INKJET_ESCPR_PPDS_COMPILE) = xy ]; then \
 		$(INSTALL_DIR) $(1)/usr/lib/cups/driver; \
-		ppdbc $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr $(1)/usr/lib/cups/driver/epson-inkjet-printer-escpr.ppdb; \
+		ppdc $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr $(1)/usr/lib/cups/driver/epson-inkjet-printer-escpr.ppdb; \
 	else \
 		$(INSTALL_DIR) $(1)/usr/share/ppd/epson-inkjet-printer-escpr; \
 		$(CP) -a $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr/* $(1)/usr/share/ppd/epson-inkjet-printer-escpr; \
