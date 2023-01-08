@@ -68,7 +68,7 @@ endef
 define Package/epson-inkjet-printer-escpr-ppds/install
 	if [ x$(CONFIG_EPSON_INKJET_ESCPR_PPDS_COMPILE) = xy ]; then \
 		$(INSTALL_DIR) $(1)/usr/lib/cups/driver; \
-		ppdc $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr $(1)/usr/lib/cups/driver/epson-inkjet-printer-escpr.ppdb; \
+		#ppdc $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr $(1)/usr/lib/cups/driver/epson-inkjet-printer-escpr.ppdb; \
 	else \
 		$(INSTALL_DIR) $(1)/usr/share/ppd/epson-inkjet-printer-escpr; \
 		$(CP) -a $(PKG_INSTALL_DIR)/usr/share/ppd/epson-inkjet-printer-escpr/* $(1)/usr/share/ppd/epson-inkjet-printer-escpr; \
